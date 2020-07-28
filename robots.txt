@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://lfe.io/sitemap.xml
