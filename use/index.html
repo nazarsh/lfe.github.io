@@ -8,7 +8,7 @@
     <meta name="author" content="LFE Maintainers">
     <meta name="generator" content="Zola">
 
-    <title>LFE : Use</title>
+    <title>(LFE:Use)</title>
     <meta name="description" content="">
     
 
@@ -201,13 +201,13 @@
 <ol>
 <li>With Erlang and <code>rebar3</code> installed, running <code>rebar3 lfe repl</code> in a project directory will start up the LFE REPL and provide access to all your project modules, include files, and dependencies.</li>
 <li>If you <code>git clone</code>d the LFE repo to a machine, then running <code>make</code> and then <code>./bin/lfe</code> will start up the LFE REPL.</li>
-<li>Lastly, you can run the LFE REPL with only docker on your machine via <code>docker run -it lfex/lfe</code> (no Erlang, no <code>rebar3</code> necessary); for many people, this is the quickly, most pain-free way of trying out LFE.</li>
+<li>Lastly, you can run the LFE REPL with only docker on your machine via <code>docker run -it lfex/lfe</code> (no Erlang, no <code>rebar3</code> necessary); for many people, this is the quickest, most pain-free way of trying out LFE.</li>
 </ol>
-<p>In all of the above, once you are in the REPL, you have access to the <code>(help)</code> function which will print out some help text for running a bunch of top-level commands. Also, you may start typing a function call (e.g., <code>(lists:</code>) and then double-tap <code>&lt;TAB&gt;</code> to provide a list of available functions from the given module. Very often this obviates a need to look up the function you want to call!</p>
+<p>In all of the above, once you are in the REPL, you have access to the <code>(help)</code> function which will print out some help text for running a bunch of top-level commands. Also, you may start typing a function call (e.g., <code>(lists:</code>) and then double-tap <code>&lt;TAB&gt;</code> to provide a list of available functions from the given module. Very often this obviates any need to look up the function you want to call!</p>
 <h2 id="reference"><a href="https://lfe.io/use/#reference">Reference</a></h2>
-<p>When <code>(help)</code> and tab-completion aren't enough, it's time to break out the books. The core LFE reference is your friend:</p>
+<p>When <code>(help)</code> and tab-completion aren't enough, it's time to break out the books. The core LFE reference set (man page source files in Markdown format) is your friend:</p>
 <ul>
-<li><a href="https://github.com/rvirding/lfe/blob/develop/doc/src/lfe_guide.7.md">The LFE Guide</a> (man page source)</li>
+<li><a href="https://github.com/rvirding/lfe/blob/develop/doc/src/lfe_guide.7.md">The LFE Guide</a></li>
 <li><a href="https://github.com/rvirding/lfe/blob/develop/doc/src/lfe_types.7.md">The data types in LFE</a></li>
 <li><a href="https://github.com/rvirding/lfe/blob/develop/doc/src/lfe.1.md">REPL functions, variables, and environment</a></li>
 <li><a href="https://github.com/rvirding/lfe/blob/develop/doc/src/lfe_io.3.md">LFE formatting</a></li>
