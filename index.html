@@ -97,7 +97,7 @@
             <a class="nav-link " href="&#x2F;about&#x2F;">About</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="http://blog.lfe.io/">Blog</a>
+            <a class="nav-link" href="https://blog.lfe.io/">Blog</a>
         </li>
     </ul>
     <ul class="navbar-nav">
@@ -137,14 +137,14 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <img src="&#x2F;images&#x2F;LFE-logo-abbr-6.2.png" />
                 </div>
-                <div class="col-md-4 tagline">
-                    <em>"Fifty Shades of Distributed, Syntax-Free Message-Passing."</em>
+                <div class="col-md-6 tagline">
+                    <em id="lfe-tagline">"Taking the syntax out of distributed systems programming"</em>
                 </div>
 
-                <div class="col-md-4 download">
+                <div class="col-md-3 download">
                     <div class="container">
                         <div class="row">
                             <div class="col-6 dl-icon-container">
@@ -503,7 +503,7 @@ languages. In LFE, you get to use the real deal.
 
             <p class="lfe-summary">
                 LFE is not a casual Lisp. It's a Lisp for those who want to build distributed
-applications -- like the Erlang software that powers 40% of the world's 
+applications -- like the Erlang software that powers 40% of the world's
 telecommunications.
                 <a class="btn btn-primary btn-sm" href="#"
                     role="button">Learn More &raquo;</a></p>
@@ -703,6 +703,11 @@ start your prototype as a release, with zero pain and all of the benefit.
 
             <div class="col-md-4 book">
                 
+                <h2>The LFE<br/>Style Guide</h2>
+                <p><a href="https://lfe.io/books/style-guide/"><img src="https://lfe.io/books/style-guide/images/cover.jpg" alt="The LFE Style Guide" /></a> </p>
+                <p><a class="btn btn-secondary" href="" role="button">Read Now
+                        &raquo;</a></p>
+                
             </div>
 
             
@@ -792,6 +797,27 @@ start your prototype as a release, with zero pain and all of the benefit.
 </main>
 
 
+<script src="/js/biwascheme.js">
+  ;; Project: https://github.com/biwascheme/biwascheme
+  ;; Docs: https://www.biwascheme.org/index.html
+  (let* ([quotes (list "\"A proper Lisp.\""
+                       "\"I'm sorry, what was that last part again? Did you just say 'Lisp'?\""
+                       "\"Taking the syntax out of distributed systems programming.\""
+                       "\"Syntactically and semantically chaotic.\""
+                       "\"Where even a distributed Prolog dare not go.\""
+                       "\"MACLISP and supervision trees are all that anyone needs.\""
+                       "\"Fifty shades of distributed, syntax-free message-passing.\""
+                       "\"Come for the fault-tolerance and high-availability. Stay for the fault-tolerance and high-availability.\"")]
+          [num-quotes (length quotes)])
+    (define get-quote (lambda ()
+      (list-ref quotes (random-integer num-quotes))))
+    (define set-quote (lambda ()
+      (set-content! "#lfe-tagline" (get-quote))))
+    (set-timer! set-quote 60))
+</script>
+
+
+
 
     
     <footer class="footer mt-auto py-3">
@@ -871,6 +897,9 @@ start your prototype as a release, with zero pain and all of the benefit.
     gtag('config', 'UA-38274766-3');
 </script>
 
+    
+
+    
     
 </body>
 
